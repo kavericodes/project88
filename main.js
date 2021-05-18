@@ -10,7 +10,7 @@ var player_object = "";
 var block_image_object = "";
 
 function player_update(){
-    fabric.Img.fromURL("player.png", function(Img){
+    fabric.Image.fromURL("player.png", function(Img){
         player_object = Img; 
     
         player_object.scaleToWidth(150);
@@ -124,7 +124,7 @@ function down(){
 
 function left(){
     if(player_x >= 0){
-        player_x = player_x - block_image_height;
+        player_x = player_x - block_image_width;
         console.log("block image width = "+ block_image_width);
         console.log("Left key  X = " + player_x + "Y = " + player_y);
         canvas.remove(player_object);
